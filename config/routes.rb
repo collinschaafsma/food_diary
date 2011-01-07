@@ -1,25 +1,8 @@
 FoodDiary::Application.routes.draw do
   root :to => 'home#index'
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
   match 'admin' => 'admin/dashboard#index'
-
-  
-
-  devise_for :users
+  match 'secure' => 'home#secure'
+  devise_for :users, :controllers => {:sessions => 'sessions'}
   namespace "admin" do
     resources :users
   end
