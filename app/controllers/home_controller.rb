@@ -4,7 +4,7 @@ class HomeController < ApplicationController
   end
 
   def secure
-    render :json => {:secure => "yes"}
+    render :json => {:secure => "yes"}.to_json, :callback => params[:callback]
   end
 
 end
