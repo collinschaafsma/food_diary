@@ -1,3 +1,11 @@
+GIT
+  remote: http://github.com/thoughtbot/paperclip.git
+  revision: e23d7f51aaaa2ac70f96e7741892adb3272d02b8
+  specs:
+    paperclip (2.3.8)
+      activerecord
+      activesupport
+
 GEM
   remote: http://rubygems.org/
   specs:
@@ -211,6 +219,7 @@ DEPENDENCIES
   jammit
   launchy
   mocha
+  paperclip!
   pickle
   rails (~> 3.0.0)
   rails3-generators
