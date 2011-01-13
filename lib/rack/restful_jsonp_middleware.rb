@@ -23,7 +23,6 @@ module Rack
       method = req.params[@method_parameter_name]
       method = method.to_s.upcase
       if HTTP_METHODS.include?(method)
-        p method
         env["rack.methodoverride.original_method"] = env["REQUEST_METHOD"]
         env["REQUEST_METHOD"] = method
         env[HTTP_METHOD_OVERRIDE_HEADER] = method

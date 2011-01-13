@@ -9,7 +9,6 @@ class Api::SessionsController < Devise::SessionsController
   def create
 
     user = warden.authenticate(:scope => :user)
-    p user.inspect
     if user
       user.reset_authentication_token!
       render :json => {:access_token => user.authentication_token, :token_type => "persistant"}, :callback => params[:callback]
